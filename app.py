@@ -10,8 +10,9 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        zasifrovani = request.form.get("zasifrovani")
-        desifrovani = request.form.get("desifrovani")
+        sifra = request.form.get("sifra")
+        if sifra == "Blážova šifra":
+            return render_template("tajemstvi.html")
         # Zde můžete přidat logiku pro šifrování/dešifrování
     return render_template("index.html")
     
