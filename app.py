@@ -10,10 +10,10 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     zprava = None
-    if request.method == "GET":
+    if request.method == "POST":
         sifra = request.form.get("sifra")
         if sifra == "Blážova šifra":
-            zprava = "Gratulujeme! Odhalili jste tajemství. Teď misto index.html přejděte na tajemstvi.html kde vám formálně pogratuluji"
+            zprava = "Gratulujeme! Odhalili jste tajemství. Teď misto index.html přejděte na tajemstvi kde vám formálně pogratuluji"
         else:
             zprava = "Nesprávná šifra. Zkuste to znovu."
     return render_template("index.html", zprava=zprava)
