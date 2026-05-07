@@ -68,6 +68,11 @@
                 <input type="text" name="sifra" placeholder="Zadej Šifru" class="form-control mb-3">
                 <button type="submit" class="btn btn-mystical">Odeslat Šifru</button>
             </form>
+            {% if zprava %}
+            <div class="alert alert-info mt-3" role="alert">
+                {{ zprava }}
+            </div>
+            {% endif %}
         </div>
     </div>
     <!-- Bootstrap JS -->

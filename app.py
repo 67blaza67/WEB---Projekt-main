@@ -9,13 +9,14 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
+    zprava = None
+    if request.method == "GET":
         sifra = request.form.get("sifra")
         if sifra == "Blážova šifra":
-            return render_template("tajemstvi.html")
-        # Zde můžete přidat logiku pro šifrování/dešifrování
-    return render_template("index.html")
-    
+            zprava = "Gratulujeme! Odhalili jste tajemství. Teď misto index.html přejděte na tajemstvi.html kde vám formálně pogratuluji"
+        else:
+            zprava = "Nesprávná šifra. Zkuste to znovu."
+    return render_template("index.html", zprava=zprava)
 
 
 
