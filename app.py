@@ -13,7 +13,7 @@ def index():
     if request.method == "POST":
         sifra = request.form.get("sifra")
         if sifra == "Blážova šifra":
-            zprava = "Gratulujeme! Odhalili jste tajemství. Teď misto index.html přejděte na tajemstvi kde vám formálně pogratuluji"
+            zprava = "Odhalili jste tajemství. Teď misto index přejděte na tajemstvi kde vám formálně pogratuluji"
         else:
             zprava = "Nesprávná šifra. Zkuste to znovu."
     return render_template("index.html", zprava=zprava)
@@ -24,7 +24,6 @@ def index():
 def tajemstvi():
     if request.method == "POST":
         tajemstvi = request.form.get("tajemstvi")
-        # Zde můžete přidat logiku
     return render_template("tajemstvi.html")
 
 
