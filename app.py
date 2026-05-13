@@ -14,10 +14,10 @@ def index():
         sifra = request.form.get("sifra")
         if sifra == "rakev":
             zprava = "Správně! Teď něco trochu těžšího. Jak se říká žákovi z doby kamenné? "
-        elif sifra == "Pražák":
+        elif sifra == "pražák":
             zprava = "Výborně! Poslední otázka. Jak se jmenuje stránka s nejlepšími hádankami? "
-        elif sifra == "Blážova hádanka":
-            zprava = "Odhalili jste tajemství. Teď misto index přejděte na tajemstvi kde vám formálně pogratuluji"
+        elif sifra == "blážova hádanka":
+            zprava = "Odhalili jste tajemství. Teď přejděte na /tajemstvi kde vám formálně pogratuluji"
         else:
             zprava = "Nesprávná odpověď. Zkuste to znovu."
     return render_template("index.html", zprava=zprava)
