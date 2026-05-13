@@ -60,14 +60,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Blážova šifra</h1>
+        <h1>Blážova hádanka</h1>
         
         <div class="mystical-box">
-            <p>Zadejte šifru pro odhalení tajemství:</p>
-            <p style="color: #666;">Heslo je: Blážova šifra</p>
+            <p>Zadejte odpověď pro odhalení tajemství:</p>
+            <p style="color: #b92020;">Kdo to dělá, nechce to, kdo to koupí, nepotřebuje to, kdo to potřebuje, neví o tom co to je? </p>
             <form method="POST">
-                <input type="text" name="sifra" placeholder="Zadej Šifru" class="form-control mb-3">
-                <button type="submit" class="btn btn-mystical">Odeslat Šifru</button>
+                <input type="text" name="sifra" placeholder="Zadej Odpověď" class="form-control mb-3">
+                <button type="submit" class="btn btn-mystical">Odeslat Odpověď</button>
             </form>
             {% if zprava %}
                 <div class="alert alert-info mt-3">{{ zprava }}</div>
